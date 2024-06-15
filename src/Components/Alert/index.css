@@ -1,0 +1,15 @@
+.custom-alert {
+    animation: slideInFromLeft 0.5s ease-out;
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      opacity: 0.5;
+      transform: translateX(-100%); /* Start from off-screen left */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%); /* End at the centered position */
+    }
+  }
+  
