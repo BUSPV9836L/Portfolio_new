@@ -14,7 +14,7 @@ const Footer = () => {
           <h1 className=" portfolio-name">BIPIN</h1>
           <p>
             I am a frontend developer from, India with 1.5 years of experience
-            at Hipaas Inc
+            at Hipaas Inc.
           </p>
         </div>
         <div className="footer-top-right">
@@ -62,7 +62,7 @@ const Footer = () => {
       </div>
       <hr />
       <div className="footer-bottom">
-        <p>© 2023 Bipin Vihwalarma. All rights reserved.</p>
+        <p>© 2023 Bipin Vishwakarma. All rights reserved.</p>
       </div>
     </div>
   );
