@@ -52,7 +52,6 @@ const CustomAlert = (props) => {
           backgroundColor: "transparent",
           cursor: "pointer",
           fontSize: "24px",
-          cursor: "pointer",
         }}
       >
         <span aria-hidden="true">&times;</span>
