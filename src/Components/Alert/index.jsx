@@ -25,7 +25,6 @@ const CustomAlert = (props) => {
     position: "fixed",
     width: "fit-content",
     minHeight: "50px",
-    minWidth: "400px",
     top: "5%",
     left: "50%",
     transform: "translateX(-50%)",
@@ -35,6 +34,7 @@ const CustomAlert = (props) => {
     borderRadius: "4px",
     padding: "10px",
     boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+    textWrap:"nowrap"
   };
 
   return (
