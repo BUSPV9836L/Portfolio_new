@@ -3,7 +3,7 @@ import "./Hero.css";
 import profile_img from "../../assets/profile_image.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Link } from "react-router";
-
+import Resume from "../../../BipinVishwakarmaResume.pdf";
 const Hero = () => {
   return (
     <div id="home" className="hero">
@@ -20,7 +20,7 @@ const Hero = () => {
         </Link>
 
         <a
-          href="../../../BipinVishwakarmaResume.pdf"
+          href={Resume}
           target="_blank"
           rel="noopener noreferrer"
           style={{ textDecoration: "none", color: "white" }}
