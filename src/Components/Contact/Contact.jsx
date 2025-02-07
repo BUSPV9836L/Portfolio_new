@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Contact.css";
 import theme_pattern from "../../assets/theme_pattern.svg";
 import mail_icon from "../../assets/mail_icon.svg";
 import location_icon from "../../assets/location_icon.svg";
 import call_icon from "../../assets/call_icon.svg";
 import emailjs from "@emailjs/browser";
-import { PRIMARY, SUCCESS, DANGER } from "../../Components/Alert/index"
+import { PRIMARY, SUCCESS, DANGER } from "../../Components/Alert/index";
 const Contact = (props) => {
   const [form, setForm] = useState({
     name: "",
@@ -13,21 +13,21 @@ const Contact = (props) => {
     message: "",
     phone: "",
   });
-  const [isLoading,setIsLoading]=useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   const validate = (e) => {
     e.preventDefault();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (form.name.trim() == "") {
-      props.showAlert("Name should contain atleast two word.",DANGER);
+      props.showAlert("Name should contain atleast two word.", DANGER);
       return;
     } else if (!emailRegex.test(form.email)) {
-      props.showAlert("Please enter a valid email.",DANGER);
+      props.showAlert("Please enter a valid email.", DANGER);
       return;
     } else if (form.message.trim() == "") {
-      props.showAlert("Please enter message.",DANGER);
+      props.showAlert("Please enter message.", DANGER);
       return;
     } else if (form.phone.trim().length !== 10) {
-      props.showAlert("Please enter valid phone no.",DANGER);
+      props.showAlert("Please enter valid phone no.", DANGER);
       return;
     } else {
       sendEmail();
@@ -67,18 +67,18 @@ const Contact = (props) => {
           });
           setTimeout(() => {
             setIsLoading(false);
-            props.showAlert("Message Sent Succesfully.",SUCCESS);
+            props.showAlert("Message Sent Succesfully.", SUCCESS);
           }, 500);
-          
         } else {
-          props.showAlert("Some error occured.",DANGER);
+          props.showAlert("Some error occured.", DANGER);
         }
       })
       .catch((error) => {
+        setIsLoading(false);
         console.error("Error sending email:", error.message);
+        props.showAlert("Error sending email.", DANGER);
       });
   };
-
   return (
     <div id="contact" className="contact">
       <div className="title-box">
@@ -139,7 +139,12 @@ const Contact = (props) => {
             onChange={handelOnChange}
             value={form.message}
           ></textarea>
-          <button disabled={isLoading} style={{opacity:`${isLoading?"50%":"100%"}`}} type="submit" className="contact-submit">
+          <button
+            disabled={isLoading}
+            style={{ opacity: `${isLoading ? "50%" : "100%"}` }}
+            type="submit"
+            className="contact-submit"
+          >
             Submit now
           </button>
         </form>

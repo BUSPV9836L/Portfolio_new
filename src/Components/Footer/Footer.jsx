@@ -13,8 +13,8 @@ const Footer = () => {
         <div className="footer-top-left">
           <h1 className=" portfolio-name">BIPIN</h1>
           <p>
-            I am a frontend developer from, India with 1.5 years of experience
-            at Hipaas Inc.
+            I am a fullstack developer from, India with 2 years of experience at
+            Hipaas Inc.
           </p>
         </div>
         <div className="footer-top-right">
