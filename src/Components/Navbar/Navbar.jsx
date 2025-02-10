@@ -57,7 +57,7 @@ const Navbar = () => {
   }, []);
   return (
     <div className="navbar">
-      <h1 className="portfolio-name">BIPIN Vishwakarma</h1>
+      <h1 className="portfolio-name">BIPIN VISHWAKARMA</h1>
       <img src={menu_open} onClick={openMenu} alt="" className="nav-mob-open" />
       <ul ref={menuRef} className="nav-menu">
         <img
