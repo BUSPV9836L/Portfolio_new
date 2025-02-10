@@ -4,9 +4,9 @@ import Hero from "./Components/Hero/Hero";
 import About from "./Components/About/About";
 import MyWork from "./Components/MyWork/MyWork";
 import Contact from "./Components/Contact/Contact";
-import Footer from "./Components/Footer/Footer";
 import MyWorkDetails from "./Container/MyWorkDetails";
 import Layout from "./Components/Layout";
+import Article from "./Container/Article";
 
 const App = () => {
   const [message, setMessage] = useState(null);
@@ -27,7 +27,6 @@ const App = () => {
         <About />
         <MyWork />
         <Contact showAlert={showAlert} />
-        <Footer />
       </>
     );
   };
@@ -47,6 +46,10 @@ const App = () => {
           path: "MyWork",
           element: <MyWorkDetails />,
         },
+        // {
+        //   path: "Article",
+        //   element: <Article />,
+        // },
       ],
     },
   ]);
