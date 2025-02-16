@@ -16,7 +16,7 @@
   bottom: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(270deg, #df8908 80%, #b415ff 100%);
+  background: linear-gradient(270deg, #df8908 80%, #0fffff 100%);
   width: 0; /* Initially hidden */
   transition: width 0.3s ease-in-out;
 }
@@ -31,7 +31,7 @@
 .nav-connect {
   padding: 15px 20px;
   border-radius: 50px;
-  background: linear-gradient(to right, rgb(2, 81, 192), rgb(157, 3, 192));
+  background: linear-gradient(to right, rgb(2, 81, 192), #0fffff);
   font-size: 16px;
   cursor: pointer;
   transition: 0.5s;
@@ -66,7 +66,7 @@
 .portfolio-name {
   font-weight: 700;
   font-family: cursive;
-  color: #b923e1;
+  color: #0fffff;
 }
 @media (max-width: 768px) {
   .navbar {
@@ -75,7 +75,7 @@
   .portfolio-name {
     font-weight: 700;
     font-family: cursive;
-    color: #b923e1;
+    color: #0fffff;
     font-size: 25px;
   }
   .nav-connect {

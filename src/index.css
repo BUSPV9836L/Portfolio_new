@@ -5,7 +5,8 @@
 }
 body {
   min-height: 100vh;
-  background: #003566;
+  background: black;
+
   color: white;
   /* font-family: "outfit"; */
 }
@@ -15,7 +16,7 @@ body {
   height: 100%;
   z-index: -10;
 }
-p{
+p {
   line-height: 1.8;
 }
 .title-box {

@@ -15,6 +15,7 @@ const App = () => {
     setMessage(message);
     setType(type);
   };
+
   const handelClear = () => {
     setMessage(null);
     setType(null);

@@ -29,7 +29,7 @@ const Navbar = () => {
     navbarBorder.style.left = "0";
     navbarBorder.style.height = "3px";
     navbarBorder.style.background =
-      "linear-gradient(270deg, #DF8908 80%, #B415FF 100%)";
+      "linear-gradient(270deg, #DF8908 80%, #0FFFFF 100%)";
     navbarBorder.style.width = "0";
     navbarBorder.style.transition = "width 0.1s ease-in-out";
     navbar.appendChild(navbarBorder);
@@ -41,7 +41,7 @@ const Navbar = () => {
       const scrollPercentage = (scrollTop / scrollHeight) * 100;
 
       if (scrollTop > 0) {
-        navbar.style.backgroundColor = "#01305c";
+        navbar.style.backgroundColor = "#111111";
       } else {
         navbar.style.backgroundColor = "transparent";
       }
