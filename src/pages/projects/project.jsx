@@ -72,7 +72,7 @@ const Projects = () => {
             className="group relative rounded-3xl noise-bg backdrop-blur-lg overflow-hidden cursor-pointer"
             style={{ "--bg-base": "#121111" }}
             onClick={() =>
-              navigate(`/project/${project.title.replace(" ","")}`, {
+              navigate(`/project/${project.title}`, {
                 state: project,
               })
             }

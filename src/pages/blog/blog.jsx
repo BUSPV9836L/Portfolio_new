@@ -86,7 +86,7 @@ const Blog = () => {
         {blogPosts.map((post) => (
           <div
             key={post.id}
-            onClick={() => navigate(`/blog/${post.title.replace(" ","")}`,{
+            onClick={() => navigate(`/blog/${post.title}`,{
               state:post
             })}
             className="

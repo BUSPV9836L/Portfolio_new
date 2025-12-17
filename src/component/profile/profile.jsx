@@ -4,12 +4,13 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { FiGithub, FiTwitter } from "react-icons/fi";
 import { Link, useNavigate } from "react-router";
 import { AnimatedButton } from "../comman";
+import { SiGeeksforgeeks } from "react-icons/si";
 
 const socialDetails = [
-  { url: "", icon: FaInstagram },
-  { url: "", icon: SlSocialLinkedin },
-  { url: "", icon: FiGithub },
-  { url: "", icon: FiTwitter },
+  { url: "https://www.instagram.com/bvrx.zx?igsh=MW54b3V1OGp1eHl5dw==", icon: FaInstagram },
+  { url: "https://www.linkedin.com/in/bipin-vishwakarma-68a15a242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", icon: SlSocialLinkedin },
+  { url: "https://github.com/BUSPV9836L", icon: FiGithub },
+  { url: "https://www.geeksforgeeks.org/profile/xyzbipin", icon: SiGeeksforgeeks },
 ];
 
 const Profile = () => {
@@ -42,7 +43,7 @@ const Profile = () => {
         <ul className="flex mt-8 gap-8">
           {socialDetails.map(({ url, icon: Icon }, index) => (
             <li key={index} className="text-xl text-gray-300 hover:text-white">
-              <Link to={url}>
+              <Link target="_blank" to={url}>
                 <Icon />
               </Link>
             </li>
