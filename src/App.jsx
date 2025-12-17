@@ -1,61 +1,62 @@
 import React, { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Hero from "./Components/Hero/Hero";
-import About from "./Components/About/About";
-import MyWork from "./Components/MyWork/MyWork";
-import Contact from "./Components/Contact/Contact";
-import MyWorkDetails from "./Container/MyWorkDetails";
-import Layout from "./Components/Layout";
-import Article from "./Container/Article";
+import Layout from "./component/layout/layout";
+import { LandingPage } from "./pages/landing-page";
+import { Project } from "./pages/projects";
+import ProjectDetails from "./pages/projects/project-details";
+import BlogDetails from "./pages/blog/blog-details";
+import Blog from "./pages/blog/blog";
+import Contact from "./pages/contact/contact";
+import { Experience } from "./pages/experience";
+import ExperienceDetail from "./pages/experience/experience-details";
 
 const App = () => {
-  const [message, setMessage] = useState(null);
-  const [type, setType] = useState(null);
-  const showAlert = (message, type) => {
-    setMessage(message);
-    setType(type);
-  };
-
-  const handelClear = () => {
-    setMessage(null);
-    setType(null);
-  };
-
-  const LandingPage = () => {
-    return (
-      <>
-        <Hero />
-        <About />
-        <MyWork />
-        <Contact showAlert={showAlert} />
-      </>
-    );
-  };
-
   const router = createBrowserRouter([
     {
       path: "/",
-      element: (
-        <Layout handelClear={handelClear} message={message} type={type} />
-      ),
+      element: <Layout />,
       children: [
         {
-          index: true,
+          path: "/",
           element: <LandingPage />,
         },
         {
-          path: "MyWork",
-          element: <MyWorkDetails />,
+          path: "/projects",
+          element: <Project />,
         },
-        // {
-        //   path: "Article",
-        //   element: <Article />,
-        // },
+        {
+          path: "/experience",
+          element: <Experience/>,
+        },
+        {
+          path: "/experience/:id",
+          element: <ExperienceDetail/>,
+        },
+        {
+          path: "/contacts",
+          element: <Contact />,
+        },
+        {
+          path: "/project/:id",
+          element: <ProjectDetails />,
+        },
+        {
+          path: "/blogs",
+          element: <Blog />,
+        },
+        {
+          path: "/blog/:id",
+          element: <BlogDetails />,
+        },
       ],
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 };
 
 export default App;
