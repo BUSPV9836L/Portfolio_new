@@ -52,8 +52,6 @@ const NavBar = () => {
                 >
                   <Icon className="text-xl sm:text-lg md:text-xl" />
                 </Link>
-
-                {/* Tooltip – desktop only */}
                 <span
                   className="
                     hidden md:block

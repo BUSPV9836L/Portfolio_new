@@ -18,7 +18,7 @@ const ExperienceDetail = () => {
 
   return (
     <section className="text-white">
-      <div className="mx-auto max-w-3xl">
+      <div>
         <button
           onClick={() => navigate(-1)}
           className="mb-6 text-sm text-gray-400 hover:text-violet-400"

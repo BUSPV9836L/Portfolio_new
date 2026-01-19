@@ -12,12 +12,9 @@ import {
   SiGraphql,
 } from "react-icons/si";
 import { useNavigate } from "react-router";
+import { useState } from "react";
 
-const data = [
-  { title: "YEARS EXPERIENCE", value: "3+" },
-  { title: "PROJECTS", value: "5+" },
-  { title: "CLIENTS", value: "2+" },
-];
+import { FaPlus } from "react-icons/fa";
 
 export const techStack = [
   { name: "React", icon: <FaReact className="text-cyan-400" /> },
@@ -34,7 +31,13 @@ export const techStack = [
 ];
 
 const Home = () => {
+  const [data, setData] = useState([
+    { title: "YEARS EXPERIENCE", value: "3" },
+    { title: "PROJECTS", value: "4" },
+    { title: "CLIENTS", value: "2" },
+  ]);
   const navigate = useNavigate();
+
   return (
     <section className="w-full">
       <h1 className="text-5xl font-bold leading-tight text-center sm:text-start">
@@ -57,7 +60,9 @@ const Home = () => {
             key={index}
             className=" flex  flex-col items-center sm:items-start"
           >
-            <h4 className="text-7xl font-extrabold">{stat.value}</h4>
+            <h4 className="text-7xl font-extrabold flex items-center gap-3">
+              {stat.value} <FaPlus size={40} />
+            </h4>
             <p className="text-[10px] sm:text-xs uppercase tracking-wide text-gray-400">
               {stat.title}
             </p>

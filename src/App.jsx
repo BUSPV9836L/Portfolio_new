@@ -9,6 +9,7 @@ import Blog from "./pages/blog/blog";
 import Contact from "./pages/contact/contact";
 import { Experience } from "./pages/experience";
 import ExperienceDetail from "./pages/experience/experience-details";
+// import AddFeedbackForm from "./pages/feedback/add-feedback";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -48,6 +49,10 @@ const App = () => {
           path: "/blog/:id",
           element: <BlogDetails />,
         },
+        // {
+        //   path: "/add-feedback",
+        //   element: <AddFeedbackForm />,
+        // },
       ],
     },
   ]);
