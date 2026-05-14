@@ -8,7 +8,7 @@ import { SiGeeksforgeeks } from "react-icons/si";
 
 const socialDetails = [
   { url: "https://www.instagram.com/bvrx.zx?igsh=MW54b3V1OGp1eHl5dw==", icon: FaInstagram },
-  { url: "https://www.linkedin.com/in/bipin-vishwakarma-68a15a242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", icon: SlSocialLinkedin },
+  { url: "https://www.linkedin.com/in/bipin-vishwakarma-a940953ba/", icon: SlSocialLinkedin },
   { url: "https://github.com/BUSPV9836L", icon: FiGithub },
   { url: "https://www.geeksforgeeks.org/profile/xyzbipin", icon: SiGeeksforgeeks },
 ];
